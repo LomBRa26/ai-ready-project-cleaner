@@ -1,5 +1,8 @@
 # 🚀 AI Ready Project Cleaner
 
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+
 Ferramenta em Python para gerar uma versão limpa do seu projeto antes de enviar para IA como Gemini, ChatGPT ou Claude.
 
 ---
@@ -8,15 +11,16 @@ Ferramenta em Python para gerar uma versão limpa do seu projeto antes de enviar
 
 Ao enviar projetos para IA, você acaba incluindo:
 
-- node_modules (gigantesco)
+- node_modules (gigante)
 - ambientes virtuais (venv)
 - arquivos `.env` (RISCO 🔥)
 - caches, logs e builds
 
-Resultado:  
-❌ IA lenta  
-❌ análise ruim  
-❌ risco de expor dados  
+Resultado:
+
+- ❌ IA lenta  
+- ❌ análise ruim  
+- ❌ risco de expor dados  
 
 ---
 
@@ -24,116 +28,136 @@ Resultado:
 
 Este script:
 
-✔ Cria uma cópia limpa do projeto  
-✔ Remove arquivos desnecessários  
-✔ Mantém a estrutura original  
-✔ Protege dados sensíveis  
+- ✔ Cria uma cópia limpa do projeto  
+- ✔ Remove arquivos desnecessários  
+- ✔ Mantém a estrutura original  
+- ✔ Protege dados sensíveis  
 
 ---
 
-## 📦 Como usar (FORMA SIMPLES)
+## 📦 Como usar (forma simples)
 
-### 👉 Opção 1 — Rodar dentro do projeto
+### 1. Coloque o script na raiz do projeto
 
-1. Copie o arquivo `clean.py` para a raiz do seu projeto:
+Exemplo:
 
-``` id="d4mfzi"
-/meu-projeto
-│
+```
+meu-projeto/
 ├── app/
 ├── backend/
 ├── frontend/
-├── clean.py  👈 AQUI
+├── clean.py
+```
 
-Execute:
+---
 
+### 2. Execute
+
+```bash
 python clean.py
-📁 Resultado
+```
+
+---
+
+### 📁 Resultado
 
 Será criada automaticamente uma pasta:
 
+```
 clean_project/
+```
 
-📌 Dentro dela estará a versão limpa do seu projeto.
+Com a versão limpa do seu projeto.
 
-⚙️ Como usar (FORMA PROFISSIONAL)
-👉 Opção 2 — Passando caminhos
+---
 
-Você pode rodar o script de qualquer lugar passando:
+## ⚙️ Como usar (modo avançado)
 
+Você também pode passar caminhos manualmente:
+
+```bash
 python clean.py ORIGEM DESTINO
-Exemplo:
+```
+
+### Exemplo:
+
+```bash
 python clean.py "C:\Projetos\MeuApp" "C:\Projetos\MeuApp_limpo"
-📌 O que acontece:
+```
 
-ORIGEM → pasta do projeto original
+---
 
-DESTINO → onde será criada a versão limpa
+### 📌 Como funciona
 
-Se a pasta destino já existir:
+- `ORIGEM` → seu projeto original  
+- `DESTINO` → onde será criada a cópia limpa  
 
-🔥 Ela será limpa automaticamente antes da cópia
+Se o destino já existir:
 
-🧠 Comportamento importante
+> 🔥 Ele será LIMPO automaticamente antes da cópia
 
-❌ NUNCA apaga seu projeto original
+---
 
-✅ Sempre cria uma cópia separada
+## 🧠 Comportamento importante
 
-🔁 Se rodar novamente → sobrescreve o destino
+- ❌ Nunca apaga seu projeto original  
+- ✅ Sempre cria uma cópia separada  
+- 🔁 Pode rodar várias vezes (sobrescreve o destino)  
 
-🧹 O que é removido automaticamente
-Pastas:
+---
 
-venv / .venv / env
+## 🧹 O que é removido automaticamente
 
-node_modules
+### Pastas:
+- venv / .venv / env  
+- node_modules  
+- __pycache__  
+- .git  
+- .vscode / .idea  
+- build / dist  
 
-pycache
+### Arquivos:
+- `.env` (todos)  
+- `.log`, `.tmp`, `.cache`  
+- `.DS_Store`, `Thumbs.db`  
 
-.git
+---
 
-.vscode / .idea
-
-build / dist
-
-Arquivos:
-
-.env (todos)
-
-.log, .tmp, .cache
-
-.DS_Store, Thumbs.db
-
-⚙️ Personalização
+## ⚙️ Personalização
 
 Edite no código:
 
-FOLDERS_TO_IGNORE
-FILES_TO_IGNORE
-EXTENSIONS_TO_IGNORE
-💡 Casos de uso
+- `FOLDERS_TO_IGNORE`
+- `FILES_TO_IGNORE`
+- `EXTENSIONS_TO_IGNORE`
 
-Enviar projeto para IA (Gemini / ChatGPT)
+---
 
-Revisão de código
+## 💡 Casos de uso
 
-Subir projeto limpo no GitHub
+- Enviar projeto para IA (Gemini / ChatGPT)  
+- Revisão de código  
+- Subir projeto limpo no GitHub  
+- Compartilhar com clientes  
 
-Compartilhar com clientes
+---
 
-🔥 Pro Tip
+## 🔥 Pro Tip
 
-Use antes de pedir para IA:
+Antes de usar IA:
 
-"Analise esse projeto e sugira melhorias"
+> "Analise esse projeto e sugira melhorias"
 
-A resposta fica MUITO melhor.
+Com o projeto limpo, a resposta melhora MUITO.
 
-⭐ Contribuição
+---
+
+## ⭐ Contribuição
 
 Pull requests são bem-vindos!
 
-📣 Autor
+---
+
+## 📣 Autor
 
 Se isso te ajudou, deixa uma ⭐ no repositório!
