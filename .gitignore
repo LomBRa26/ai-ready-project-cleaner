@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Node
+node_modules/
+
+# Env files
+.env
+.env.*
+
+# Git
+.git/
+
+# Cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Output da ferramenta
+clean_project/
